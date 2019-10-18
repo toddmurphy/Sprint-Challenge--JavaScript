@@ -57,5 +57,6 @@ const cuboid = new CuboidMaker({
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
-
+/**NOTE, if you change the values of the cuboid ojbect, the console will update or run classes.js in ther terminal to get the correct output. Otherwise there's a syntax error that keeps saying Cuboid was already identified */
+/*IMPORTANT: When i copy my class to codepen, it works fine, so i'm not going to worry about this error */
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
