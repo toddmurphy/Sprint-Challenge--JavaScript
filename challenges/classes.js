@@ -4,9 +4,9 @@
 */
 class CuboidMaker {
   constructor(attributes) {
-    `${newDimension.length} * ${newDimension.width} +
-        ${newDimension.length} * ${newDimension.height} +
-        ${newDimension.width} * ${newDimension.height}`;
+    this.length = attributes.length;
+    this.height = attributes.height;
+    this.width = attributes.width;
   }
   volume() {
     return `${newDimension.length} * ${newDimension.width} * ${newDimension.height}`;
