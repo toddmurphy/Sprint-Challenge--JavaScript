@@ -4,19 +4,19 @@
 */
 class CuboidMaker {
   constructor(attributes) {
-    this.length = attributes.length;
-    this.width = attributes.width;
-    this.height = attributes.height;
+    `${newDimension.length} * ${newDimension.width} +
+        ${newDimension.length} * ${newDimension.height} +
+        ${newDimension.width} * ${newDimension.height}`;
   }
   volume() {
-    return this.length * this.width * this.height;
+    return `${newDimension.length} * ${newDimension.width} * ${newDimension.height}`;
   }
   surfaceArea() {
     return (
       2 *
-      (this.length * this.width +
-        this.length * this.height +
-        this.width * this.height)
+      `${newDimension.length} * ${newDimension.width} +
+        ${newDimension.length} * ${newDimension.height} +
+        ${newDimension.width} * ${newDimension.height}`
     );
   }
 }
@@ -30,15 +30,15 @@ class CubeMaker extends CuboidMaker {
   }
   //newDimension parameter assigned cuboid properties
   cubeVolume(newDimension) {
-    return newDimension.length * newDimension.width * newDimension.height;
+    return `${newDimension.length} * ${newDimension.width} * ${newDimension.height}`;
   }
   //newDimension parameter assigned cuboid properties
   cubeSurface(newDimension) {
     return (
       2 *
-      (newDimension.length * newDimension.width +
-        newDimension.length * newDimension.height +
-        newDimension.width * newDimension.height)
+      `${newDimension.length} * ${newDimension.width} +
+        ${newDimension.length} * ${newDimension.height} +
+        ${newDimension.width} * ${newDimension.height}`
     );
   }
 }
