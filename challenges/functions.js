@@ -40,7 +40,8 @@ console.log(consume('Mary', 'Poppins', greeting)); // Hello Mary Poppins, nice t
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation:
-// nestedfunction can access the variable internal due to closures. This means that the scope chain, or lexical scope in which the nest functions reside can access or reach out and access the information from functions located outside its local scope, or functional scope. The closure or nested chain looks like this Global scope(const = external)->functional scope(myFunc)->local scope(nestedFunc or internal)
+// nestedfunction can access the variable internal due to closures.
+// This means that the scope chain, or lexical scope in which the nest functions reside can access or reach out and access the information from functions located outside its local scope, or functional scope. The closure or nested chain looks like this Global scope(const = external)->functional scope(myFunc)->local scope(nestedFunc or internal)
 
 const external = "I'm outside the function";
 

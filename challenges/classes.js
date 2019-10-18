@@ -9,14 +9,14 @@ class CuboidMaker {
     this.width = attributes.width;
   }
   volume() {
-    return `${newDimension.length} * ${newDimension.width} * ${newDimension.height}`;
+    return `${this.length} * ${this.width} * ${this.height}`;
   }
   surfaceArea() {
     return (
       2 *
-      `${newDimension.length} * ${newDimension.width} +
-        ${newDimension.length} * ${newDimension.height} +
-        ${newDimension.width} * ${newDimension.height}`
+      `${this.length} * ${this.width} +
+        ${this.length} * ${this.height} +
+        ${this.width} * ${this.height}`
     );
   }
 }
@@ -29,16 +29,16 @@ class CubeMaker extends CuboidMaker {
     super(attributes);
   }
   //newDimension parameter assigned cuboid properties
-  cubeVolume(newDimension) {
-    return `${newDimension.length} * ${newDimension.width} * ${newDimension.height}`;
+  cubeVolume(num1, num2, num3) {
+    return `${num1} * ${num2} * ${num3}`;
   }
   //newDimension parameter assigned cuboid properties
-  cubeSurface(newDimension) {
+  cubeSurface(num1, num2, num3) {
     return (
       2 *
-      `${newDimension.length} * ${newDimension.width} +
-        ${newDimension.length} * ${newDimension.height} +
-        ${newDimension.width} * ${newDimension.height}`
+      `${num1} * ${num2} +
+        ${num1} * ${num3} +
+        ${num2} * ${num3}`
     );
   }
 }
@@ -76,12 +76,17 @@ const cuboid = new CuboidMaker({
   height: 5
 });
 
+const cube = new CubeMaker({
+  length: 4,
+  width: 5,
+  height: 5
+});
 /**NOTE, if you change the values of the cuboid ojbect, the console will update or run classes.js in ther terminal to get the correct output. Otherwise there's a syntax error that keeps saying Cuboid was already identified */
 /*IMPORTANT: When i copy my class to codepen, it works fine, so i'm not going to worry about this error */
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
-console.log(cuboid.cubeVolume(cuboid)); // pass in 'cuboid' object as an argument and the pass/assign it to the parameter 'newDimension' to use cuboid properties.
-console.log(cuboid.cubeSurface(cuboid)); // pass in 'cuboid' object as an argument and the pass/assign it to the parameter 'newDimension' to use cuboid properties.
+console.log('here', cube.cubeVolume(4, 5, 5)); // pass in 'cuboid' object as an argument and the pass/assign it to the parameter 'newDimension' to use cuboid properties.
+console.log(cube.cubeSurface(4, 5, 5)); // pass in 'cuboid' object as an argument and the pass/assign it to the parameter 'newDimension' to use cuboid properties.
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
